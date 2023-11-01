@@ -1,0 +1,143 @@
+# Loon 手动配置
+# Date: 2023-09-11 23:35:14
+# Author: https://t.me/iKeLee
+
+[General]
+doh-server = https://223.5.5.5/dns-query,https://1.12.12.12/dns-query
+doq-server = quic://223.5.5.5:853,quic://223.6.6.6:853
+geoip-url = https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
+disable-udp-ports = 443
+fast-switch = false
+ipv6 = true
+dns-server = 223.5.5.5,114.114.114.114,223.6.6.6
+# 腾讯DoH和阿里云DoH
+allow-wifi-access = false
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+proxy-test-url = http://www.apple.com/library/test/success.html
+test-timeout = 2
+interface-mode = auto
+sni-sniffing = true
+disable-stun = false
+disconnect-on-policy-change = true
+switch-node-after-failure-times = 3
+resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/latest/downloads/sub-store-parser.loon.min.js
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,captive.apple.com,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,239.255.255.250/32,255.255.255.255/32
+
+[Proxy]
+
+[Remote Proxy]
+Legeth = https://subscribe.legeth.net/api/v1/client/subscribe?token=7e18de7d5c38c3c8e5cd9c8d46b09d46&flag=v2ray,udp=true,fast-open=false,vmess-aead=true,enabled=true,img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
+泡泡 = https://sub.store/download/%E6%B3%A1%E6%B3%A1?target=Loon,udp=true,fast-open=false,vmess-aead=true,enabled=true,img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Roundrobin.png
+海豚 = https://s.haituncloud.vip/link/TZcNCKprLOKjzP8m?sub=3,udp=true,fast-open=false,vmess-aead=true,enabled=true,img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UN.png
+
+[Remote Filter]
+游戏节点 = NameRegex, FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)\b)))(?!.*((?i)回国|校园)).*$"
+全球节点 = NameRegex, FilterKey = "^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+香港节点 = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+台湾节点 = NameRegex, FilterKey = "^(?=.*((?i) 🇹🇼 |台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+日本节点 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+韩国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+新国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+美国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+
+[Proxy Group]
+全球手动 = select,全球节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
+国外媒体 = select,全球节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
+# 手动策略组
+香港手动 = select,香港节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾手动 = select,台湾节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本手动 = select,日本节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国手动 = select,韩国节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国手动 = select,新国节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国手动 = select,美国节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+游戏手动 = select,游戏节点,全球手动,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png
+
+[Rule]
+DOMAIN-SUFFIX,getupnote.com,全球手动
+DOMAIN-SUFFIX,haituncloud.xyz,全球手动
+DOMAIN-SUFFIX,emby.wtf,DIRECT
+# Type:DOMAIN-SUFFIX, DOMAIN, DOMAIN-KEYWORD, USER-AGENT, URL-REGEX, IP-CIDR
+# Strategy:DIRECT, PROXY, REJECT
+# Options:no-resolve(only for cidr)
+# IP-CIDR, 192.168.0.0/16, DIRECT
+# IP-CIDR, 10.0.0.0/8, DIRECT
+# IP-CIDR, 172.16.0.0/12, DIRECT
+# IP-CIDR, 127.0.0.0/8, DIRECT
+# GEOIP, cn, DIRECT
+FINAL,全球手动
+
+[Remote Rule]
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Rule/RULE_REGION, policy=DIRECT, tag=CN REGION, enabled=false
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=全球手动, tag=Telegram, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/GitHub/GitHub.list, policy=全球手动, tag=GitHub, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/Twitter/Twitter.list, policy=全球手动, tag=Twitter, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/Instagram/Instagram.list, policy=国外媒体, tag=Instagram, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/YouTube/YouTube.list, policy=国外媒体, tag=Youtube, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/Google/Google.list, policy=全球手动, tag=Google, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/TikTok/TikTok.list, policy=国外媒体, tag=TikTok, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/Spotify/Spotify.list, policy=香港手动, tag=Spotify, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Rule/OpenAI.list, policy=全球手动, tag=OpenAI, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Rule/ApplePushNotificationService.list, policy=DIRECT, tag=Apple Push Notification Service, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/Apple/Apple.list?ref_type=heads, policy=DIRECT, tag=Apple规则, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/Apple/Apple_Domain.list?ref_type=heads, policy=DIRECT, tag=Apple_Domain, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AliPay/AliPay.list, policy=DIRECT, tag=支付宝, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Tencent/Tencent.list, policy=DIRECT, tag=腾讯规则, enabled=true
+https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Loon/OneDrive/OneDrive.list, policy=DIRECT, tag=OneDrive, enabled=true
+https://gitlab.com/lodepuly/asn-china/-/raw/main/ASN.China.list, policy=DIRECT, tag=ChinaASN, enabled=true
+
+[Host]
+www.jadkg.xyz = 171.110.224.32
+
+[Rewrite]
+
+[Script]
+cron "0 1 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js, timeout=10, enabled=false, tag=机场签到
+http-response ^https?:\/\/api\.x-storm\.com\/app\/(user-profile|share-code\/get)\/$ script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/storm.js, requires-body=true, timeout=10, tag=螃蟹破解, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapchat.png
+
+cron "7 7 7 ? * *" script-path=https://raw.githubusercontent.com/deezertidal/private/main/oil.js, timeout=10, tag=油价提醒, argument="广西"
+
+cron "17 7-19/4 * * *" script-path=https://yfamily.vercel.app/plugin/tianqi.js, timeout=10, tag=今日天气, argument="101300506"
+
+[Plugin]
+http://script.hub/file/_start_/https://raw.githubusercontent.com/chxm1023/Rewrite/main/uua.js/_end_/uua.plugin?type=qx-rewrite&target=loon-plugin, tag=UUA视频网站VIP解锁, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/TestFlight.plugin, policy=DIRECT, enabled=true
+https://gitlab.com/isous/loonresource/-/raw/main/Plugin/Documents_crack.plugin, tag=Documents解锁, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Script-Hub.plugin, enabled=true
+https://yfamily.vercel.app/plugin/multisearch.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled=true
+https://yfamily.vercel.app/plugin/tianqi.plugin, enabled=true
+https://yfamily.vercel.app/plugin/oil.plugin, enabled=true
+https://yfamily.vercel.app/plugin/aliyun.plugin, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/JD_Price.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/LoonGallery.plugin, policy=全球手动, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/BoxJS.plugin, policy=DIRECT, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/EMBY.plugin, tag=EMBY破解, enabled=true
+https://raw.githubusercontent.com/deezertidal/private/master/plugallery/bili.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Spotify_lyrics_translation.plugin, enabled=true
+https://yfamily.vercel.app/plugin/SpotifyPremium.plugin, enabled=true
+https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/TikTok_redirect.plugin, policy=国外媒体, enabled=true
+https://yfamily.vercel.app/plugin/fanqienovel.plugin, tag=番茄小说, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weibo_intl_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Remove_splash_screen_ads.plugin, enabled=true
+https://raw.githubusercontent.com/Keywos/rule/main/loon/Netisp.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Sub-Store.plugin, policy=全球手动, tag=Sub-Store, enabled=true
+
+[Mitm]
+ca-p12 = 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
+ca-passphrase = 8EFM1054
+hostname = *.zijieapi.com,*.x-storm.com
+ca-p12 = 
+ca-passphrase = 
+skip-server-cert-verify = false
