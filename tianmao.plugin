@@ -8,7 +8,7 @@
 [Rule]
 
 [Rewrite]
-^https:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ url reject-200
-^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig url reject
+^https:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ reject-200
+^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig reject
 [Mitm]
 hostname = ossgw.alicdn.com, zconfig.alibabausercontent.com
