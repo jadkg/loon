@@ -1,6 +1,6 @@
 #!name=建工计算器
-#!desc=建工计算器解锁
-#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/Plugallery.png
+#!desc=建工计算器解锁（非一次性解锁，使用App前需开启脚本）
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Magazine.png
 #!homepage=
 #!author=
 [Script]
