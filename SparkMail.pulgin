@@ -1,5 +1,5 @@
 #!name= SparkMail解锁永久订阅
-#!desc= SparkMail解锁永久订阅
+#!desc= SparkMail解锁永久订阅（一次性解锁，恢复订阅后关闭插件）
 #!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spark.png
 
 [Script]
