@@ -1,0 +1,10 @@
+#!name=adblock解锁会员
+#!desc=adblock解锁会员（非一次性解锁）
+#!icon=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+
+[Script]
+http-response ^https:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, timeout=60, tag=adblockpro
+
+[MITM]
+hostname = api.adblockpro.app
+
