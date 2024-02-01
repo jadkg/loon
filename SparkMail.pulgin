@@ -1,0 +1,10 @@
+#!name= SparkMail解锁永久订阅
+#!desc= SparkMail解锁永久订阅
+#!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spark.png
+
+[Script]
+# > SparkMail解锁永久订阅
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/.{36}|subscribers\/\w{14})$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SparkMailProCrack.js, requires-body=true, timeout=60, tag=SparkMailProCrack
+
+[MITM]
+hostname = api.revenuecat.com
