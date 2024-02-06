@@ -1,6 +1,6 @@
 #!name=蜜雪冰城签到
 #!desc=打开小程序，随便逛逛，提示获取cookie成功则可以使用该脚本，关闭获取cookie脚本，防止产生不必要的mitm
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Pokemon/Pokemon-1020.png
+#!icon=https://raw.githubusercontent.com/jadkg/loon/main/logo/mxbc.PNG
 
 [Script]
 http-request ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, tag=蜜雪冰城获取token
