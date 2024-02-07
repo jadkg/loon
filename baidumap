@@ -1,6 +1,6 @@
 #!name=百度地图
 #!desc=移除广告
-#!icon=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Map.png
+#!icon=https://raw.githubusercontent.com/jadkg/loon/main/logo/baidumap.PNG
 
 [Rewrite]
 # 组件包
