@@ -1,0 +1,9 @@
+#!name=骨钉itunes解锁
+#!desc=骨钉itunes解锁合集
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_AppleStore.png
+
+[Script]
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body=true, timeout=60, tag=APPheji_iTunes
+
+[MITM]
+hostname = buy.itunes.apple.com
