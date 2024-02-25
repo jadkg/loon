@@ -1,0 +1,13 @@
+#!name = 松鼠下载解锁
+#!desc = 此为一次性解锁，先开启插件，再进入软件即可，如果无效可尝试点击[恢复购买]进行恢复。若以上如果都无效果，请先试用，再启用此插件。完成解锁后建议禁用此插件，避免影响App Store的正常使用。
+#!openUrl = https://apps.apple.com/app/id1554089934
+#!author = chxm1023
+#!homepage = https://gitlab.com/isous/loonresource/-/tree/main/Plugin
+#!icon = https://gitlab.com/isous/loonresource/-/raw/main/Icon/Squirrel_Download.png
+#!date = 2024-02-25 19:23:03
+
+[Script]
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://gitlab.com/isous/loonresource/-/raw/main/Script/Squirrel_Download/Squirrel_Download_crack.js, requires-body = true, tag = 松鼠下载解锁
+
+[Mitm]
+hostname = buy.itunes.apple.com
