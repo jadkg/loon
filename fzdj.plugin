@@ -1,0 +1,9 @@
+#!name=芳仲短剧-神剧专用
+#!desc=解锁全部神剧 
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_FaceTime.png
+
+[Script]
+http-response https:\/\/slb\.weilianmenggz\.cn\/api\/(theater\/without\/group\/index|user\/info) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/fzdj.js, requires-body=true, timeout=60, tag=fzdj
+
+[MITM]
+hostname = slb.weilianmenggz.cn
