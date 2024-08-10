@@ -4,9 +4,7 @@
 #!homepage=
 #!author=
 [Script]
-http-response ^https:\/\/calc\.kuaicad\.com\/authority\/verify_vip\? requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/jiangongjsq.js
-
-
+http-response ^https?:\/\/calc\.kuaicad\.com\/authority\/verify_vip script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jgjsq.js, requires-body=true, timeout=60, tag=jgjsq
 
 [MITM]
 hostname = calc.kuaicad.com
